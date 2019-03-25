@@ -1,0 +1,7 @@
+{
+  "name": "hedev-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

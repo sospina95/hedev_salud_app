@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Gestión de pacientes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+  <ion-refresher slot="fixed" (ionRefresh)="getPatients($event)" [disabled]="false">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content> 
+  </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let item of result">
+      <ion-label>
+        <h2>{{item.name}}</h2>
+        <h3>{{item.address}}</h3>
+        <h3>{{item.phone}} - {{item.cellphone}}</h3>
+        <p>{{item.email}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
