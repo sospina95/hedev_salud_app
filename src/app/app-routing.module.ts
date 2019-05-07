@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,10 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'patient', loadChildren: './patient/patient.module#PatientPageModule' },
-  { path: 'patient_detail', loadChildren: './patient-detail/patient-detail.module#PatientDetailPageModule' }
+  { path: 'patient_detail', loadChildren: './patient-detail/patient-detail.module#PatientDetailPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+
 ];
 
 @NgModule({

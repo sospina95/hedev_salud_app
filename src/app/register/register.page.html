@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-label>Tipo de documento:</ion-label>
+        <ion-select placeholder="Seleccionar" [(ngModel)]="IdTipoDocumento">
+          <ion-select-option value="1">Cedula</ion-select-option>
+          <ion-select-option value="2">Tarjeta de identidad</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Número Documento" required [(ngModel)]="NumeroDocumento"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Apellidos" required [(ngModel)]="Apellidos"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Nombres" required [(ngModel)]="Nombres"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha Nacimiento:</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" placeholder="Dia / Mes / Año" [(ngModel)]="FechaNacimiento"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Dirección" required [(ngModel)]="Direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Teléfono" required type="tel" [(ngModel)]="Telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Celular" required type="tel" [(ngModel)]="Celular"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Género:</ion-label>
+        <ion-select placeholder="Seleccionar" [(ngModel)]="Genero">
+          <ion-select-option value="M">Masculino</ion-select-option>
+          <ion-select-option value="F">Femenino</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Email" required type="email" [(ngModel)]="Email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button ion-button full (click)="postPatients()" [disabled]="bloqueoBoton">Registrar</ion-button>
+  <ion-button ion-button full (click)="goLogin()">Login</ion-button>
+</ion-content>

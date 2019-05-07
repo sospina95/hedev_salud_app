@@ -1,6 +1,6 @@
 import  { Injectable } from '@angular/core';
 const CONFIG = {
-    apiUrls : "http://localhost:3000/api/index"
+    apiUrls : "http://localhost:3000/"
 };
 @Injectable({
     providedIn: 'root'
